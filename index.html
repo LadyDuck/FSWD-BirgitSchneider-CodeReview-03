@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Chivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Chivo&display=swap" rel="stylesheet">
 
+    <script src = "js/insurance.js"></script>
+
     <title>Car Insurence</title>
   </head>
   <body>
@@ -32,8 +34,8 @@
     <div class ="nav">
             
         <ul>
-            <li><a href = "http://google.de">Home</a></li>
-            <li><a href = "http://google.de">Team</a></li>
+            <li><a href = "#home">Home</a></li>
+            <li><a href = "team.html">Team</a></li>
         </ul> 
 
     </div>
@@ -51,26 +53,28 @@
           <div class = "row abstand">
             
             <div class = "col-md-3 offset-md-2"><label>Your name:</label><input class="form-control" type="text" id = "username"></div>
-            <div class = "col-md-3 offset-md-2"><label>Age:</label><form><input class="form-control" type="text" id = "alter"></div><form>
+            <div class = "col-md-3 offset-md-2"><label>Age:</label><form><input class="form-control" type="text" id = "alter"></form></div>
+
           </div>
 
           <div class = "row">
-            <div class = "col-md-3 offset-md-2"><label>Country:</label><select class="form-control" id = "country">
-              <option selected value = "austria">Austria</option>
-              <option value = "hungary">Hungary</option>
-              <option value = "Greece">Greece</option>
-            </select></div>
+            <div class = "col-md-3 offset-md-2"><label>Country:</label>
+              <select class="form-control" id = "country">
+                <option selected value = "austria">Austria</option>
+                <option value = "hungary">Hungary</option>
+                <option value = "Greece">Greece</option>
+              </select>
+          </div>
             <div class = "col-md-3 offset-md-2"><label>Horsepower of your car:</label><input class="form-control" type="text" id = "horsepower" ></div>
           </div>
+
           <div class = "row abstand text-center">
-          <button type="button" class="btn mx-auto" onclick = "calculateInsurance()" style="width: 200px;">Calculate</button>
+            <button type="button" class="btn mx-auto" onclick = "calculateInsurance()" style="width: 200px;">Calculate</button>
           </div>
-          <!-- <div class="panel panel - default">  -->
-            <!-- <div class = "panel-body" id = "panel">Test test test</div> -->
-            <p class = "panel" id = "panel"> Test test test test </p>
+            <p class = "panel" id = "panel">Please fill out the form above!</p>
           </div>
        </div> 
-  </div>
+  
 
 
   <!-- Grauer Bereich -->
@@ -83,7 +87,7 @@
 
   <!-- Cards -->
 
-  <div class="row abstand2">
+  <div class="row abstand2" id = "home">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -123,8 +127,8 @@
 <div class = "row black">
   <div class ="nav2">     
         <ul>
-            <li><a href = "http://google.de">Home</a></li>
-            <li><a href = "http://google.de">Team</a></li>
+            <li><a href = "#home">Home</a></li>
+            <li><a href = "team.html">Team</a></li>
         </ul>
     </div>
 
@@ -138,7 +142,7 @@
 <div>  
 
 
-  <script>
+ <!--  <script>
    
 
     // document.getElementById("mybutton").onclick = function() {
@@ -159,14 +163,17 @@
     
     if (country == "austria") {
       insurance = Number(horsepower) * 100 / Number(age) + 50;
+      insurance = Math.round(insurance);
       console.log(insurance);
       document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
     } else if (country == "hungary") {
       insurance = Number(horsepower) * 120 / Number(age) + 100;
+      insurance = Math.round(insurance);
       console.log(insurance);
       document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
     }else {
       insurance = (parseInt(horsepower) * (150 / parseInt(age) +3)) + 50;
+      insurance = Math.round(insurance);
       console.log(insurance);
       document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
 
@@ -174,6 +181,6 @@
 
     } 
 
-  </script>
+  </script> -->
   </body>
 </html>

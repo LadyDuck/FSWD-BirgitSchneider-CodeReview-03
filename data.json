@@ -1,0 +1,26 @@
+var teamMembers = [
+    {
+
+       "name": "Dr. Frogman",
+
+       "email": "froggy@gmail.com",
+
+       "image": "img/team_member1.jpg"
+
+   }, {
+
+       "name": "Mag. Sweetie",
+
+       "email": "sweetie@gmail.com",
+
+       "image": "img/team_member2.jpg"
+   }, {
+
+       "name": "Dr. Wild",
+
+       "email": "animal@gmail.com",
+
+       "image": "img/team_member3.jpg"
+
+   }]
+ 

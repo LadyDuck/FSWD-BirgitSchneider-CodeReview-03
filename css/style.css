@@ -139,8 +139,10 @@
 
         .panel {
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
             padding-top: 30px;
+            color: rgb(50,205,50);
         }
 
         .card {
@@ -251,6 +253,19 @@
         	text-align: center;
         	margin: auto;
         	margin-bottom: 15px;
+        }
+
+
+        /* Team */
+
+        #team {
+            height: 900px;
+
+        }
+
+        .card-img-top {
+            width: 270px;
+            height: 270px;
         }
 
 

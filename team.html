@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="data.json"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href ="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Chivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Chivo&display=swap" rel="stylesheet">
+
+    <title>Team</title>
+  </head>
+  <body>
+
+
+    <div class = "container">
+
+  <!-- Header -->
+
+    <div class = "header">
+      
+      <img id = "newspaper" src = "img/logo.png" alt = "logo">
+      <img id = "banner1" src = "img/banner.png" alt = "banner">
+
+    </div>
+
+    <div class ="nav">
+            
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "#team">Team</a></li>
+        </ul> 
+
+    </div>
+
+    <!-- Header Ende -->
+
+    
+
+    <!--Team Mitglieder -->
+    
+     
+    
+
+      <script>
+
+      document.writeln("<div class='row abstand2'>");
+
+      var i = 0; 
+
+      for (i = 0; i < teamMembers.length; i++) {
+        document.writeln("<div class='col-sm-4'>");
+        document.writeln("<div class='card'>");
+        document.writeln("<img src=" + teamMembers[i].image + " class='card-img-top'>");
+        document.writeln("<div class='card-body'>");
+        document.writeln("<h5 class='card-title'>" +teamMembers[i].name + "</h5>");
+        document.writeln("<p class='card-text'>" + teamMembers[i].email + "</p>");
+        document.writeln("</div>");
+        document.writeln("</div>");
+        document.writeln("</div>");
+      }
+
+      document.writeln("</div>");
+
+      </script>
+
+      
+    <!-- footer -->
+
+<!-- <div class = "footer"> -->
+<div class = "row black">
+  <div class ="nav2">     
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "#team">Team</a></li>
+        </ul>
+    </div>
+
+
+  <img id = "logo" src = "img/logo-inv.png" alt = "logo">
+</div>
+<div class = "row black">
+  <p class = "name">Birgit Schneider - CodeFactory 2019</p>
+</div>
+
+<div>  
