@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href ="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Chivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Chivo&display=swap" rel="stylesheet">
+
+    <title>Car Insurence</title>
+  </head>
+  <body>
+
+
+    <div class = "container">
+
+  <!-- Header -->
+
+    <div class = "header">
+      
+      <img id = "newspaper" src = "img/logo.png" alt = "logo">
+      <img id = "banner1" src = "img/banner.png" alt = "banner">
+
+    </div>
+
+    <div class ="nav">
+            
+        <ul>
+            <li><a href = "http://google.de">Home</a></li>
+            <li><a href = "http://google.de">Team</a></li>
+        </ul> 
+
+    </div>
+
+  <!-- Jumbotron -->
+
+  <div class="jumbotron">
+       <h3 class="display-4">Car insurance</h3>
+        <hr class="my-4">
+
+        <div id = "formular">
+
+          <h2 id = "big">Great coverage begins<br/>with a custom quote</h2>
+
+          <div class = "row abstand">
+            
+            <div class = "col-md-3 offset-md-2"><label>Your name:</label><input class="form-control" type="text" id = "username"></div>
+            <div class = "col-md-3 offset-md-2"><label>Age:</label><form><input class="form-control" type="text" id = "alter"></div><form>
+          </div>
+
+          <div class = "row">
+            <div class = "col-md-3 offset-md-2"><label>Country:</label><select class="form-control" id = "country">
+              <option selected value = "austria">Austria</option>
+              <option value = "hungary">Hungary</option>
+              <option value = "Greece">Greece</option>
+            </select></div>
+            <div class = "col-md-3 offset-md-2"><label>Horsepower of your car:</label><input class="form-control" type="text" id = "horsepower" ></div>
+          </div>
+          <div class = "row abstand text-center">
+          <button type="button" class="btn mx-auto" onclick = "calculateInsurance()" style="width: 200px;">Calculate</button>
+          </div>
+          <!-- <div class="panel panel - default">  -->
+            <!-- <div class = "panel-body" id = "panel">Test test test</div> -->
+            <p class = "panel" id = "panel"> Test test test test </p>
+          </div>
+       </div> 
+  </div>
+
+
+  <!-- Grauer Bereich -->
+
+  <div class = grey>
+  <h4 class = "center" id = "bigger">Un-complicating car coverage</h4>
+        <p class = "center">Understanding your coverage options shouldn´t be so hard.<br/>We´ll guide you through available coverage types,<br/>starting with who and what is covered.</p>
+  </div>
+
+
+  <!-- Cards -->
+
+  <div class="row abstand2">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-title">What comes standard</p>
+        <p class="card-text">The coverage you need</p>
+        <ul class = "checkmark">
+          <li>Bodily Injury Liabilty</li>
+          <li>Property Damage</li>
+          <li>Medical Payments</li>
+        </ul>
+        <p id = "abstand3">Benefits<p>
+        <div class = "padd">12-month rate guarantee | 24/7 customer<br/>service | Lifetime Repair Guarantee</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-title">Add-on protection & coverage</p>
+        <p class="card-text">For more peace of mind</p>
+        <ul class = "checkmark">
+          <li>Better Car Replacement</li>
+          <li>Towing & Labor</li>
+          <li>Rental Car Coverage</li>
+        </ul>
+        <p id = "abstand3">Earned Benefits<p>
+        <div class = "padd">Accident Forgiveness<sup>1</sup> | New Car<br/>Replacement<sup>TM</sup></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+
+<!-- <div class = "footer"> -->
+<div class = "row black">
+  <div class ="nav2">     
+        <ul>
+            <li><a href = "http://google.de">Home</a></li>
+            <li><a href = "http://google.de">Team</a></li>
+        </ul>
+    </div>
+
+
+  <img id = "logo" src = "img/logo-inv.png" alt = "logo">
+</div>
+<div class = "row black">
+  <p class = "name">Birgit Schneider - CodeFactory 2019</p>
+</div>
+
+<div>  
+
+
+  <script>
+   
+
+    // document.getElementById("mybutton").onclick = function() {
+
+    //   document.getElementById("panel").innerHTML = "Hier wird calculiert";
+    // }
+
+
+      function calculateInsurance(event) {
+      name = document.getElementById("username").value;
+      console.log(name);
+      age = document.getElementById("alter").value;
+      console.log(age);
+      country = document.getElementById("country").value;
+      console.log(country);
+      horsepower = document.getElementById("horsepower").value;
+      console.log(horsepower);
+    
+    if (country == "austria") {
+      insurance = Number(horsepower) * 100 / Number(age) + 50;
+      console.log(insurance);
+      document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
+    } else if (country == "hungary") {
+      insurance = Number(horsepower) * 120 / Number(age) + 100;
+      console.log(insurance);
+      document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
+    }else {
+      insurance = (parseInt(horsepower) * (150 / parseInt(age) +3)) + 50;
+      console.log(insurance);
+      document.getElementById("panel").innerHTML = name + ", your insurance costs " + insurance + " €";
+
+    }
+
+    } 
+
+  </script>
+  </body>
+</html>
